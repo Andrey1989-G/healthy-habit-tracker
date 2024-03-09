@@ -1,7 +1,7 @@
 <h1 align="center"> healthy-habit-tracker
 <h2 align="center">Критерии приемки курсовой работы
 
-Настроили CORS.
+<h4 align="center">Настроили CORS.
 <h4 align="center">Настроили интеграцию с Телеграмом.
     <h4 align="center">Реализовали пагинацию.
     <h4 align="center">Использовали переменные окружения.
