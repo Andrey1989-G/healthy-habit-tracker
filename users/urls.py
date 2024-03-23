@@ -7,7 +7,6 @@ from users.apps import UsersConfig
 
 app_name = UsersConfig.name
 
-
 urlpatterns = [
     path('create/', UserCreateAPIView.as_view(), name='create'),
 

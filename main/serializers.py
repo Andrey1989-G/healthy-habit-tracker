@@ -6,6 +6,7 @@ from main.validators import (one_of_related_habit_or_award, time_to_complete_no_
 
 class UsefulHabitSerializer(serializers.ModelSerializer):
     """Сериализатор для модели Привычки"""
+
     class Meta:
         model = UsefulHabit
         fields = '__all__'

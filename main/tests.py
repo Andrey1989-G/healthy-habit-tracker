@@ -255,7 +255,7 @@ class UsefulHabitTestCase(APITestCase):
              'location': self.course_id_02.location, 'action': self.course_id_02.action,
              'is_good': self.course_id_02.is_good, 'award': self.course_id_02.award,
              'is_public': self.course_id_02.is_public, 'period': self.course_id_02.period,
-             'time_to_complete': '0'+str(self.course_id_02.time_to_complete),
+             'time_to_complete': '0' + str(self.course_id_02.time_to_complete),
              'time': str(self.course_id_02.time),
              'owner': self.user.id, 'related_habit': None}
         )
@@ -263,7 +263,7 @@ class UsefulHabitTestCase(APITestCase):
     def test_update_habit(self):
         """Тестирование редактирования привычки. """
 
-        data = {'id': self.course_id_02.id, 'title': 'Юпитер',
+        data = {'id': self.course_id_02.id, 'title': 'Попытка поменять название',
                 'location': self.course_id_02.location, 'action': self.course_id_02.action,
                 'is_good': self.course_id_02.is_good, 'award': self.course_id_02.award,
                 'is_public': self.course_id_02.is_public, 'period': self.course_id_02.period,
@@ -286,7 +286,7 @@ class UsefulHabitTestCase(APITestCase):
              'location': self.course_id_02.location, 'action': self.course_id_02.action,
              'is_good': self.course_id_02.is_good, 'award': self.course_id_02.award,
              'is_public': self.course_id_02.is_public, 'period': self.course_id_02.period,
-             'time_to_complete': '0'+str(self.course_id_02.time_to_complete),
+             'time_to_complete': '0' + str(self.course_id_02.time_to_complete),
              'time': str(self.course_id_02.time),
              'owner': self.user.id, 'related_habit': None}
         )

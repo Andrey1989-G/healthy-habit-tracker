@@ -1,6 +1,7 @@
 from django_celery_beat.models import CrontabSchedule, PeriodicTask
 from config import settings
 
+
 # функции для работы с задачами
 def create_schedule_and_habit_periodic_task(habit):
     """Создание задачи"""

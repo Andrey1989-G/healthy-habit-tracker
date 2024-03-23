@@ -33,7 +33,8 @@ class UsefulHabit(models.Model):
     is_good = models.BooleanField(default=False, verbose_name='признак приятной привычки')
     award = models.CharField(max_length=256, **NULLABLE, verbose_name='вознаграждение')
     is_public = models.BooleanField(default=False, verbose_name='признак публичности')
-    period = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(7)], default=PERIOD_DAY01, choices=PERIODS, verbose_name='периодичность')
+    period = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(7)], default=PERIOD_DAY01,
+                                 choices=PERIODS, verbose_name='периодичность')
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='пользователь')
     time_to_complete = models.DurationField(default=timedelta(seconds=120), verbose_name='время на выполнение')
     time = models.TimeField(default=datetime.time(datetime.now()), **NULLABLE, verbose_name='время выполнения')

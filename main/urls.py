@@ -5,7 +5,6 @@ from main.apps import MainConfig
 
 app_name = MainConfig.name
 
-
 urlpatterns = [
     path('create/', UsefulHabitCreateAPIView.as_view(), name='useful_habit_create'),
     path('list/', UsefulHabitListAPIView.as_view(), name='useful_habit_list'),

@@ -20,7 +20,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(BASE_DIR / '.env')
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -32,7 +31,6 @@ SECRET_KEY = '@46+_&m^m==i-=i+(^*8o+$4gb=ssz(=4!&w_pfm(vm-kz995a'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -87,7 +85,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -101,7 +98,6 @@ DATABASES = {
         'PORT': 5432,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -121,7 +117,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -132,7 +127,6 @@ TIME_ZONE = 'Asia/Yekaterinburg'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -168,7 +162,9 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
-CORS_ALLOWED_ORIGINS = []
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",
+]
 
 CSRF_TRUSTED_ORIGINS = []
 
@@ -191,7 +187,7 @@ CELERY_BROKER_URL = bool(getenv('CELERY_BROKER_URL'))
 CELERY_RESULT_BACKEND = bool(getenv('CELERY_RESULT_BACKEND'))
 
 # Часовой пояс для работы Celery
-CELERY_TIMEZONE = "Asia/Yekaterinburg"
+CELERY_TIMEZONE = getenv('CELERY_TIMEZONE')
 
 # Флаг отслеживания выполнения задач
 CELERY_TASK_TRACK_STARTED = True
